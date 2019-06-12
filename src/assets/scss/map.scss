@@ -4,6 +4,7 @@ body, html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: #000;
 }
 
 
@@ -30,8 +31,9 @@ body, html {
   perspective-origin: 10% 10%;
   width: 4000px;
   height: 4000px;
-  transform: translateZ(-1000px) rotateX(10deg) rotateZ(10deg);
+  transform: translateZ(-1000px) rotateX(10deg) rotateZ(-10deg);
 
+  /* 视角比率： translateZ : (x:y) */
 
   background-image: url("http://www.6m5m.com/data/uploads/2015/06/01/18872556c6ba2166a2.jpg");
   background-repeat: repeat;
