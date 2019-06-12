@@ -1,28 +1,70 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="app-box">
+      <div
+        class="lol-box"
+        ref="moveProject"
+        :style="{
+          left: position.map.x+'px',
+          top: position.map.y+'px' ,
+          perspectiveOrigin: getPerspectiveOrigin
+        }">
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Move from './util/move'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+
+
+  export default {
+    name: 'app',
+    data(){
+      return {
+        $move: null,
+
+        position: {
+          map: {
+            x: 0,
+            y: 0,
+            xPos: 0,
+            yPos: 0
+          }
+        }
+
+      }
+    },
+    computed: {
+      getPerspectiveOrigin(){
+        return `${this.position.map.xPos*100}% ${this.position.map.yPos*100}%`
+      }
+    },
+    methods: {
+      onMoveChange(x, y, xPos, yPos){
+        this.position.map.x = x
+        this.position.map.y = y
+
+        this.position.map.xPos = xPos
+        this.position.map.yPos = yPos
+      }
+    },
+    mounted() {
+
+      let root = this
+
+      this.$move = new Move(this.$refs.moveProject, {
+        onChange(x, y, xPos, yPos){
+          root.onMoveChange(x, y, xPos, yPos)
+        }
+      })
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import "assets/scss/base.scss";
+  @import "assets/scss/map.scss";
 </style>
