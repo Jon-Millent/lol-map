@@ -25,6 +25,10 @@ class Move {
     }, config)
 
 
+    this.database.x = this.config.x
+    this.database.y = this.config.y
+
+
     this.init()
   }
 
@@ -42,6 +46,9 @@ class Move {
 
   mouseDownEvent(e){
 
+
+
+
     this.statusBox.isTouched = true
 
     this.database.tapX = e.clientX
@@ -50,6 +57,8 @@ class Move {
   }
 
   mouseMoveEvent(e){
+
+    e.preventDefault()
 
     if(this.statusBox.isTouched) {
 

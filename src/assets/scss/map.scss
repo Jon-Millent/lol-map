@@ -18,6 +18,14 @@ body, html {
   transform-style: preserve-3d;
   perspective: 1000px;
   overflow: hidden;
+  background-image: url("assets/image/bg/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -29,14 +37,253 @@ body, html {
   perspective: 500px;
   overflow: hidden;
   perspective-origin: 10% 10%;
-  width: 4000px;
-  height: 4000px;
-  transform: translateZ(-1000px) rotateX(10deg) rotateZ(-10deg);
+  width: 5000px;
+  height: 5000px;
+  //transform: translateZ(-1000px) rotateX(10deg) rotateZ(-10deg);
 
   /* 视角比率： translateZ : (x:y) */
 
   background-image: url("http://www.6m5m.com/data/uploads/2015/06/01/18872556c6ba2166a2.jpg");
   background-repeat: repeat;
+
+
+  .ground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    .x1-y1 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/x1.jpg");
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .x1-y2 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/x2.jpg");
+      position: absolute;
+      left: 0;
+      bottom: 1000px;
+    }
+
+    .x1-y3 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/x3.jpg");
+      position: absolute;
+      left: 0;
+      bottom: 2000px;
+    }
+
+    .x1-y4 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/x4.jpg");
+      position: absolute;
+      left: 0;
+      bottom: 3000px;
+    }
+
+    .x1-y5 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/x5.jpg");
+      position: absolute;
+      left: 0;
+      bottom: 4000px;
+    }
+
+
+    .x2-y1 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/c1.jpg");
+      position: absolute;
+      left: 1000px;
+      bottom: 0px;
+    }
+    .x2-y2 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/c2.jpg");
+      position: absolute;
+      left: 1000px;
+      bottom: 1000px;
+    }
+    .x2-y3 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/c3.jpg");
+      position: absolute;
+      left: 1000px;
+      bottom: 2000px;
+    }
+    .x2-y4 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/c4.jpg");
+      position: absolute;
+      left: 1000px;
+      bottom: 3000px;
+    }
+    .x2-y5 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/c5.jpg");
+      position: absolute;
+      left: 1000px;
+      bottom: 4000px;
+    }
+
+    .x3-y1 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/v1.jpg");
+      position: absolute;
+      left: 2000px;
+      bottom: 0px;
+    }
+
+
+    .x3-y2 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/v2.jpg");
+      position: absolute;
+      left: 2000px;
+      bottom: 1000px;
+    }
+
+    .x3-y3 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/v3.jpg");
+      position: absolute;
+      left: 2000px;
+      bottom: 2000px;
+    }
+    .x3-y4 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/v4.jpg");
+      position: absolute;
+      left: 2000px;
+      bottom: 3000px;
+    }
+    .x3-y5 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/v5.jpg");
+      position: absolute;
+      left: 2000px;
+      bottom: 4000px;
+    }
+
+
+
+
+
+    .x4-y1 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/b1.jpg");
+      position: absolute;
+      left: 3000px;
+      bottom: 0px;
+    }
+    .x4-y2 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/b2.jpg");
+      position: absolute;
+      left: 3000px;
+      bottom: 1000px;
+    }
+    .x4-y3 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/b3.jpg");
+      position: absolute;
+      left: 3000px;
+      bottom: 2000px;
+    }
+    .x4-y4 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/b4.jpg");
+      position: absolute;
+      left: 3000px;
+      bottom: 3000px;
+    }
+    .x4-y5 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/b5.jpg");
+      position: absolute;
+      left: 3000px;
+      bottom: 4000px;
+    }
+
+
+
+    .x5-y1 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/n1.jpg");
+      position: absolute;
+      left: 4000px;
+      bottom: 0px;
+    }
+    .x5-y2 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/n2.jpg");
+      position: absolute;
+      left: 4000px;
+      bottom: 1000px;
+    }
+    .x5-y3 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/n3.jpg");
+      position: absolute;
+      left: 4000px;
+      bottom: 2000px;
+    }
+    .x5-y4 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/n4.jpg");
+      position: absolute;
+      left: 4000px;
+      bottom: 3000px;
+    }
+    .x5-y5 {
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/map/n5.jpg");
+      position: absolute;
+      left: 4000px;
+      bottom: 4000px;
+    }
+
+
+  }
+
+  .obj {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+  }
 
 }
 
