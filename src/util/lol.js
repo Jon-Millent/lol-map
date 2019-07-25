@@ -2,6 +2,8 @@
 import * as THREE from 'three';
 import OrbitControls from 'three-orbitcontrols'
 import Stats from 'stats-js'
+
+
 import groundConfig from '../config/ground'
 
 class LoL {
@@ -11,6 +13,8 @@ class LoL {
     this.$camera = null;
     this.$renderer = null;
     this.$controls = null;
+
+    this.$plane = null;
 
     this.$el = el
     this.$stats = null
@@ -31,6 +35,7 @@ class LoL {
     this.controller()
     this.initStats()
 
+
     this.animate()
 
   }
@@ -39,8 +44,8 @@ class LoL {
   // 添加地面
   addGround(){
     let geometry = new THREE.PlaneGeometry(1000, 1000, 1);
-    let material = new THREE.MeshBasicMaterial({color: 0xeeefff, side: THREE.DoubleSide});
-    let plane = new THREE.Mesh(geometry, material);
+    let material = new THREE.MeshBasicMaterial({color: 0x000000, side: THREE.DoubleSide});
+    let plane = this.$plane = new THREE.Mesh(geometry, material);
 
 
     plane.translateY(-0.5);

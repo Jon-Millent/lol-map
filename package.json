@@ -11,7 +11,11 @@
     "core-js": "^2.6.5",
     "stats-js": "^1.0.1",
     "three": "^0.106.2",
+    "three-fbx-loader": "^1.0.3",
+    "three-fbxloader-offical": "^1.0.0",
+    "three-obj-loader": "^1.1.3",
     "three-orbitcontrols": "^2.102.2",
+    "three-tds-loader": "^1.1.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
