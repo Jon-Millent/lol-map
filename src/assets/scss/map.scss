@@ -17,10 +17,7 @@ body, html {
   bottom: 0;
   transform-style: preserve-3d;
   perspective: 1000px;
-  overflow: hidden;
-  background-image: url("assets/image/bg/bg-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .bg-cover {
@@ -35,16 +32,12 @@ body, html {
   top: 0;
   transform-style: preserve-3d;
   perspective: 500px;
-  overflow: hidden;
   perspective-origin: 10% 10%;
   width: 5000px;
   height: 5000px;
   //transform: translateZ(-1000px) rotateX(10deg) rotateZ(-10deg);
 
   /* 视角比率： translateZ : (x:y) */
-
-  background-image: url("http://www.6m5m.com/data/uploads/2015/06/01/18872556c6ba2166a2.jpg");
-  background-repeat: repeat;
 
 
   .ground {
@@ -282,6 +275,63 @@ body, html {
     top: 0;
     right: 0;
     bottom: 0;
+
+    .l-home {
+      position: absolute;
+      left: -456px;
+      bottom: -520px;
+      width: 1000px;
+      height: 1000px;
+      background-image: url("assets/image/obj/home.png");
+
+
+      transform: rotateZ(200deg);
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateX(40deg) rotateY(0deg);
+      }
+      100% {
+        transform: rotateX(40deg) rotateY(360deg);
+      }
+    }
+
+    .crystal {
+      position: absolute;
+      left: 303px;
+      bottom: 380px;
+      width: 200px;
+      height: 200px;
+      background-color: #000;
+      border-radius: 50%;
+
+      .mid {
+        position: absolute;
+        .item {
+          width: 100px;
+          height: 100px;
+          background-color: #E00;
+          position: absolute;
+
+        }
+
+        .item1 {
+          background-color: blue;
+          transform: rotateY(-90deg) translateZ(-100px);
+        }
+        .item2 {
+          transform: rotateY(-90deg);
+        }
+        .item3 {
+          transform: translateZ(-100px);
+          background-color: green;
+          transform-origin: right center;
+        }
+        //animation: rotate 5s linear infinite;
+      }
+
+    }
 
   }
 

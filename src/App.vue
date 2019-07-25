@@ -48,8 +48,16 @@
 
         </div>
 
-
         <div class="obj">
+          <div class="l-home bg-cover"></div>
+
+          <div class="crystal">
+            <div class="mid">
+              <div class="item item1"></div>
+              <div class="item item2"></div>
+              <div class="item item3"></div>
+            </div>
+          </div>
 
         </div>
 
@@ -95,7 +103,7 @@
         let z = this.position.map.xPos > this.position.map.yPos ? xTargetPos : yTargetPos
         */
 
-        return `translateZ(-${this.maxTranslateZ}px) rotateX(10deg) rotateZ(-10deg)`
+        return `translateZ(-${this.maxTranslateZ}px) rotateX(14deg) rotateZ(-10deg)`
       }
     },
     methods: {
