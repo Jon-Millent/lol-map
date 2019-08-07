@@ -4,6 +4,9 @@ import OrbitControls from 'three-orbitcontrols'
 import Stats from 'stats-js'
 
 
+import Tower from './elements/tower'
+
+
 import groundConfig from '../config/ground'
 
 class LoL {
@@ -18,6 +21,9 @@ class LoL {
 
     this.$el = el
     this.$stats = null
+
+
+    this.aimationBox = []
   }
 
   init(){
@@ -35,11 +41,21 @@ class LoL {
     this.controller()
     this.initStats()
 
+    this.addTower()
+    this.addLight()
 
     this.animate()
 
   }
 
+
+  addLight(){
+
+    let ambientLight = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );;
+
+    // Add light element to the space
+    this.$scene.add(ambientLight);
+  }
 
   // 添加地面
   addGround(){
@@ -80,6 +96,24 @@ class LoL {
 
   }
 
+  // 添加防御塔
+  addTower(){
+    let Tower1 = new Tower({
+      x: -118,
+      z: 62
+    })
+    this.$scene.add(Tower1.getElement());
+    this.aimationBox.push(Tower1)
+
+
+    let Tower2 = new Tower({
+      x: -174,
+      z: 176
+    })
+    this.$scene.add(Tower2.getElement());
+    this.aimationBox.push(Tower2)
+  }
+
 
 
   // render
@@ -108,6 +142,11 @@ class LoL {
     // required if controls.enableDamping or controls.autoRotate are set to true
     this.$controls.update();
     this.$stats.update();
+
+
+    this.aimationBox.forEach(val=>{
+      val.animation && val.animation()
+    })
 
     this.$renderer.render( this.$scene, this.$camera );
   }
