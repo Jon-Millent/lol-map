@@ -30,7 +30,7 @@ class LoL {
 
     this.$scene = new THREE.Scene();
     this.$camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight);
-    this.$camera.position.set(3, 100, 5);
+    this.$camera.position.set(3, 1600, 5);
     this.$camera.lookAt(new THREE.Vector3(0, 0, 0));
     this.$scene.add(this.$camera);
 
@@ -100,7 +100,9 @@ class LoL {
   addTower(){
     let Tower1 = new Tower({
       x: -118,
-      z: 62
+      z: 62,
+      face: 'a',
+      speed: 0.01
     })
     this.$scene.add(Tower1.getElement());
     this.aimationBox.push(Tower1)
@@ -108,10 +110,74 @@ class LoL {
 
     let Tower2 = new Tower({
       x: -174,
-      z: 176
+      z: 176,
+      face: 'b',
+      speed: 0.008
     })
     this.$scene.add(Tower2.getElement());
     this.aimationBox.push(Tower2)
+
+
+
+
+    let Tower3 = new Tower({
+      x: -270,
+      z: 250,
+      face: 'c',
+      speed: 0.006
+    })
+    this.$scene.add(Tower3.getElement());
+    this.aimationBox.push(Tower3)
+
+
+
+    let Tower4 = new Tower({
+      x: -220,
+      z: 430,
+      face: 'd',
+      speed: 0.005
+    })
+    this.$scene.add(Tower4.getElement());
+    this.aimationBox.push(Tower4)
+
+
+    let Tower5 = new Tower({
+      x: -450,
+      z: 214,
+      face: 'd',
+      speed: 0.005
+    })
+    this.$scene.add(Tower5.getElement());
+    this.aimationBox.push(Tower5)
+
+
+    let Tower6 = new Tower({
+      x: 450,
+      z: 196,
+      face: 'e',
+      speed: 0.005
+    })
+    this.$scene.add(Tower6.getElement());
+    this.aimationBox.push(Tower6)
+
+    let Tower7 = new Tower({
+      x: -374,
+      z: 393,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower7.getElement());
+    this.aimationBox.push(Tower7)
+
+
+    let Tower8 = new Tower({
+      x: -404,
+      z: 360,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower8.getElement());
+    this.aimationBox.push(Tower8)
   }
 
 
