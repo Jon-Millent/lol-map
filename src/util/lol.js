@@ -178,6 +178,99 @@ class LoL {
     })
     this.$scene.add(Tower8.getElement());
     this.aimationBox.push(Tower8)
+
+
+    let Tower9 = new Tower({
+      x: -422,
+      z: 42,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower9.getElement());
+    this.aimationBox.push(Tower9)
+
+
+    let Tower10 = new Tower({
+      x: -460,
+      z: -220,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower10.getElement());
+    this.aimationBox.push(Tower10)
+
+
+    let Tower11 = new Tower({
+      x: -224,
+      z: -464,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower11.getElement());
+    this.aimationBox.push(Tower11)
+
+
+    let Tower12 = new Tower({
+      x: 35,
+      z: -430,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower12.getElement());
+    this.aimationBox.push(Tower12)
+
+
+    let Tower13 = new Tower({
+      x: 220,
+      z: -445,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower13.getElement());
+    this.aimationBox.push(Tower13)
+
+
+
+    let Tower14 = new Tower({
+      x: 366,
+      z: -409,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower14.getElement());
+    this.aimationBox.push(Tower14)
+
+    let Tower15 = new Tower({
+      x: 399,
+      z: -376,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower15.getElement());
+    this.aimationBox.push(Tower15)
+
+
+
+
+    let Tower16 = new Tower({
+      x: 263,
+      z: -277,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower16.getElement());
+    this.aimationBox.push(Tower16)
+
+
+
+    let Tower17 = new Tower({
+      x: 263,
+      z: -277,
+      face: 'f',
+      speed: 0.004
+    })
+    this.$scene.add(Tower17.getElement());
+    this.aimationBox.push(Tower17)
   }
 
 

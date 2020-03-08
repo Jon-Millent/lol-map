@@ -158,7 +158,7 @@ class Tower {
     // 添加血量条
 
 
-    let cubeGeometry = new THREE.BoxGeometry(40,3,2);
+    let cubeGeometry = new THREE.BoxGeometry(30,2,2);
 
     let cubeMaterial = new THREE.MeshBasicMaterial({color:0x000000});
     let hpWrap = this.hpWrap = new THREE.Mesh(cubeGeometry,cubeMaterial);
@@ -166,13 +166,13 @@ class Tower {
     hpWrap.position.x=0;
     hpWrap.position.y = 41;
     hpWrap.position.z=0;
-    hpWrap.rotation.y = 2.929
+    hpWrap.rotation.y = 3.2
 
     this.tower.add(hpWrap);
 
 
 
-    let cubeGeometry2 = new THREE.BoxGeometry(38,2.9,3);
+    let cubeGeometry2 = new THREE.BoxGeometry(28,1.9,3);
 
     let cubeMaterial2 = new THREE.MeshBasicMaterial({color:0xe00e00});
     let hpTarget = this.hpTarget = new THREE.Mesh(cubeGeometry2, cubeMaterial2);
@@ -180,7 +180,7 @@ class Tower {
     hpTarget.position.x=0;
     hpTarget.position.y = 41;
     hpTarget.position.z=0;
-    hpTarget.rotation.y = 2.929
+    hpTarget.rotation.y = 3.2
 
     this.tower.add(hpTarget);
 
